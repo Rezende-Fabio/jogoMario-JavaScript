@@ -1,0 +1,102 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.game-bord{
+    width:  100%;
+    height: 500px;
+    border-bottom: 20px solid rgb(55, 118, 55);
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(#87CEEB, #E0F6FF);
+}
+
+.pipe{
+    position: absolute;
+    bottom: -1px;
+    width: 50px;
+    animation: pipe-animacao 2s infinite linear;
+}
+
+.mario{
+    width: 100px;
+    position: absolute;
+    bottom: 0px;
+}
+
+.pulo{
+    animation: mario-pulo 700ms ease-out;
+}
+
+.nuvens{
+    position: absolute;
+    width: 250px;
+    animation: nuvens 7s infinite linear;
+}
+
+.nuvens2{
+    position: absolute;
+    width: 300px;
+    margin-top: 120px;
+    margin-left: 200px;
+    animation: nuvens 6s infinite linear;
+}
+
+
+@keyframes pipe-animacao{
+
+    from{
+        right: -70px;
+    }
+
+    to{
+        right: 100%;
+    }
+
+}
+
+
+@keyframes mario-pulo {
+
+    0%{
+        bottom: 0;
+    }
+
+    40%{
+        bottom: 85px;
+    }
+
+    50%{
+        bottom: 85px;
+    }
+
+    60%{
+        bottom: 85px;
+    }
+
+    65%{
+        bottom: 85px;
+    }
+
+    80%{
+        bottom: 70px;
+    }
+
+    100%{
+        bottom: 0;
+    }
+
+}
+
+@keyframes nuvens {
+    from{
+        right: -200px;
+    }
+
+    to{
+        right: 100%;
+    }
+}
